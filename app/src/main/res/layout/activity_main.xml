@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/blanccassé"
+    android:layout_gravity="center_horizontal|center_vertical">
+
+    <View
+        android:id="@+id/fondblue"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bluebox"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <ImageView
+        android:id="@+id/logoapp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_app" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:paddingBottom="15dp"
+        android:text="Fill the bellow information to Log In"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout" />
+
+    <LinearLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="239dp"
+        android:layout_height="375dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/whitebox"
+        android:elevation="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.618">
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingBottom="15dp"
+            android:text="Log In Account"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/poppins_light"
+            android:inputType="textPersonName"
+            android:hint="User Name or E-mail"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/poppins_light"
+            android:inputType="textPersonName"
+            android:paddingTop="20dp"
+            android:hint="Password"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:paddingBottom="20dp"
+            android:text="In case you forgot password ?"
+            android:textColor="@color/lightred"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_blue"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Log In" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:paddingTop="15dp"
+            android:text="Or"
+            android:textAlignment="center"
+            android:textColor="@color/gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/facebook__1_" />
+
+            <ImageView
+                android:id="@+id/google"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/facebook"
+                app:srcCompat="@drawable/search__2_" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:paddingTop="20dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:text="No if incorrect attemps:" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:paddingBottom="5dp"
+        android:text="Don't have an account ?"
+        android:textColor="@color/text"
+        app:layout_constraintBottom_toTopOf="@+id/Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="Register"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

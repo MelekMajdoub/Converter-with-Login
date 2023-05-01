@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConverterTemprature">
+
+    <View
+        android:id="@+id/fondblue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bluebox"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/whitebox"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fondblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/entree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Convertision"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/val"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/poppins_light"
+            android:inputType="textPersonName"
+            android:paddingTop="20dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:paddingTop="70dp"
+
+            >
+
+            <RadioButton
+                android:id="@+id/CtoF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="C° -> F°"
+                android:textSize="20sp"
+                android:padding="20dp"/>
+
+            <RadioButton
+                android:id="@+id/FtoC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="F° -> C°"
+                android:textSize="20sp"
+                android:padding="20dp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/converter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Convertir"
+            android:textSize="16sp"
+            android:onClick = "convertir"/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingTop="50dp"
+            android:paddingBottom="50dp"
+            android:text="Resultat"
+            android:textAlignment="center"
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
